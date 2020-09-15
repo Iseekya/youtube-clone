@@ -8,7 +8,14 @@
 
 import Foundation
 
-struct Model {
+protocol ModelDelegate {
+    
+    func videosFetched(_ videos:[Video])
+}
+
+class Model {
+    
+    var delegate:ModelDelegate?
     
     func getVideos() {
         
@@ -30,7 +37,28 @@ struct Model {
                 return
             }
             
-            // Parsing the data into video objects
+            do {
+                
+                // Parsing the data into video objects
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let response = try decoder.decode(Response.self, from: data!)
+                
+                if response.items != nil {
+                    
+                    DispatchQueue.main.async {
+                        // Call the "videosReturned" method of the delegate
+                        self.delegate?.videosFetched(response.items!)
+                    }
+                    
+                }
+                
+            }
+            catch {
+                
+            }
+            
             
         }
         
