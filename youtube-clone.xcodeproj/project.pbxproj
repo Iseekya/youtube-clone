@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0AF6102513628700DE9DE3 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AF60F2513628700DE9DE3 /* CacheManager.swift */; };
+		FA0AF612251382EB00DE9DE3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AF611251382EB00DE9DE3 /* DetailViewController.swift */; };
+		FA0AF61525138D5B00DE9DE3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0AF61425138D5B00DE9DE3 /* WebKit.framework */; };
 		FAA1DF1A250B665F0054AE15 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DF19250B665F0054AE15 /* Response.swift */; };
+		FAA1DF1C25123A780054AE15 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1DF1B25123A780054AE15 /* VideoTableViewCell.swift */; };
 		FAFB3E4C25076F7C005CEF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB3E4B25076F7C005CEF2F /* AppDelegate.swift */; };
 		FAFB3E4E25076F7C005CEF2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB3E4D25076F7C005CEF2F /* SceneDelegate.swift */; };
 		FAFB3E5025076F7C005CEF2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB3E4F25076F7C005CEF2F /* ViewController.swift */; };
@@ -20,7 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0AF60F2513628700DE9DE3 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		FA0AF611251382EB00DE9DE3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FA0AF61425138D5B00DE9DE3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FAA1DF19250B665F0054AE15 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FAA1DF1B25123A780054AE15 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		FAFB3E4825076F7C005CEF2F /* youtube-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFB3E4B25076F7C005CEF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFB3E4D25076F7C005CEF2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +47,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0AF61525138D5B00DE9DE3 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0AF61325138D5B00DE9DE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA0AF61425138D5B00DE9DE3 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA1DF1D25123A810054AE15 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB3E4F25076F7C005CEF2F /* ViewController.swift */,
+				FA0AF611251382EB00DE9DE3 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAA1DF1E25123A8C0054AE15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA1DF1B25123A780054AE15 /* VideoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA1DF1F25123A910054AE15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB3E6125078EB3005CEF2F /* Video.swift */,
+				FAFB3E6325078EEA005CEF2F /* Model.swift */,
+				FAA1DF19250B665F0054AE15 /* Response.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAA1DF2025123A9A0054AE15 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB3E5125076F7C005CEF2F /* Main.storyboard */,
+				FAFB3E5625076F7D005CEF2F /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		FAA1DF2125123AA10054AE15 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB3E5F25078D37005CEF2F /* Constants.swift */,
+				FA0AF60F2513628700DE9DE3 /* CacheManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FAFB3E3F25076F7C005CEF2F = {
 			isa = PBXGroup;
 			children = (
 				FAFB3E4A25076F7C005CEF2F /* youtube-clone */,
 				FAFB3E4925076F7C005CEF2F /* Products */,
+				FA0AF61325138D5B00DE9DE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,15 +129,13 @@
 			children = (
 				FAFB3E4B25076F7C005CEF2F /* AppDelegate.swift */,
 				FAFB3E4D25076F7C005CEF2F /* SceneDelegate.swift */,
-				FAFB3E4F25076F7C005CEF2F /* ViewController.swift */,
-				FAFB3E5125076F7C005CEF2F /* Main.storyboard */,
+				FAA1DF2125123AA10054AE15 /* Helpers */,
+				FAA1DF2025123A9A0054AE15 /* StoryBoards */,
+				FAA1DF1F25123A910054AE15 /* Model */,
+				FAA1DF1E25123A8C0054AE15 /* View */,
+				FAA1DF1D25123A810054AE15 /* Controller */,
 				FAFB3E5425076F7D005CEF2F /* Assets.xcassets */,
-				FAFB3E5625076F7D005CEF2F /* LaunchScreen.storyboard */,
 				FAFB3E5925076F7D005CEF2F /* Info.plist */,
-				FAFB3E5F25078D37005CEF2F /* Constants.swift */,
-				FAFB3E6125078EB3005CEF2F /* Video.swift */,
-				FAFB3E6325078EEA005CEF2F /* Model.swift */,
-				FAA1DF19250B665F0054AE15 /* Response.swift */,
 			);
 			path = "youtube-clone";
 			sourceTree = "<group>";
@@ -151,10 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAFB3E5025076F7C005CEF2F /* ViewController.swift in Sources */,
+				FA0AF6102513628700DE9DE3 /* CacheManager.swift in Sources */,
 				FAFB3E4C25076F7C005CEF2F /* AppDelegate.swift in Sources */,
 				FAFB3E4E25076F7C005CEF2F /* SceneDelegate.swift in Sources */,
 				FAFB3E6425078EEA005CEF2F /* Model.swift in Sources */,
 				FAFB3E6025078D37005CEF2F /* Constants.swift in Sources */,
+				FAA1DF1C25123A780054AE15 /* VideoTableViewCell.swift in Sources */,
+				FA0AF612251382EB00DE9DE3 /* DetailViewController.swift in Sources */,
 				FAFB3E6225078EB3005CEF2F /* Video.swift in Sources */,
 				FAA1DF1A250B665F0054AE15 /* Response.swift in Sources */,
 			);
